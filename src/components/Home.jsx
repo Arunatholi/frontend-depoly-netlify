@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Card, Button, ListGroup, Col } from 'react-bootstrap';
+
+import { Container, Row, Card, Button, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { configDotenv } from 'dotenv';
@@ -9,17 +9,13 @@ import { Link } from 'react-router-dom';
 function Home() {
 
 
-    const [Count, setCount]=useState(10);
+    
 
     const restaurants = useSelector((state) => state.data.restaurants);
 
     // console.log("Count No: 9---------->",Count);
 
-     const  updateCount = ()=>{
-        setCount (40);
-
-        // console.log ("Count No: 13---------->",Count);
-     }
+    
       
     
 
@@ -28,7 +24,7 @@ function Home() {
     // console.log(restaurant);
   return (
     <Container>
-        <button onClick = {updateCount}>update count</button>
+        {/* <button onClick = {updateCount}>update count</button> */}
         <Row>
             {restaurants &&  restaurants.map((res, index) =>(
                <Col md ={4} className='mt-4' key={index} > 

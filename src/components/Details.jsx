@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
+
 import { Container,Row, Card, Col, Button, ListGroup } from 'react-bootstrap'
 import { useSelector } from 'react-redux';
 import {useParams} from 'react-router-dom'
@@ -13,7 +12,7 @@ function Details() {
 
  
 
-  const currentRes = restaurants.find((res) => res._id == id );
+  const currentRes = restaurants.find((res) => res._id === id );
   
   console.log(currentRes);
 

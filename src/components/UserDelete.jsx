@@ -3,13 +3,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Button, Modal } from 'react-bootstrap';
 import instance from '../axios';
 import { ToastContainer,toast } from 'react-toastify';
-import { Navigate, useNavigate } from 'react-router-dom';
 // import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function UserDelete({id}) {
     const [show, setShow] = useState(false);
-    const navigate = useNavigate();
+    
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
